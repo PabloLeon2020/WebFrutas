@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--<html lang="en" >-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tutorial Flex Box">
+  
+  <title>Mi Carrito</title>
+  
+  <!--fuente de pag misprod-->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+  <!--estilo de carro-->
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css?ver=4.4.2'>
+  <link rel='stylesheet prefetch' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Ladda/0.9.8/ladda.min.css'>
+
+  <link rel="stylesheet" href="assets/styles/carrito.css">
+  <!--"slider"<link rel="stylesheet" href="assets/styles/main.css" />-->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tutorial Flex Box">
+  
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
+        
+    <style>
+    .flex-container {
+      display: flex;
+      flex-wrap: nowrap;
+      background-color: DodgerBlue;
+    }
+    
+    .flex-container > div {
+      background-color: #f1f1f1;
+      width: 100px;
+      margin: 10px;
+      text-align: justify;
+      line-height: 20px;
+      font-size: 20px;
+    }
+    
+    /* de aca hacia abajo es el estilo del menu */
+    
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: dodgerblue;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+    
+    .active {
+      background-color: #4CAF50;
+    }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <nav id="topNav">
+        <ul>
+            <li><a href="index.html" title="Nav Link 1">Home</a></li>
+            <li><a href="Formulario.html" title="Nav Link 1">Formulario</a></li>
+                <!--<ul>  
+                    <li><a href="#" title="Sub Nav Link 1">Sub Nav Link 1</a></li>
+                    <li><a href="#" title="Sub Nav Link 2">Sub Nav Link 2</a></li>
+                    <li><a href="#" title="Sub Nav Link 3">Sub Nav Link 3</a></li>
+                    <li><a href="#" title="Sub Nav Link 4">Sub Nav Link 4</a></li>
+                    <li class="last"><a href="#" title="Sub Nav Link 5">Sub Nav Link 5</a></li>
+                </ul>-->
+            <li><a href="misProductos.html" title="Nav Link 1">misProductos</a></li>
+        </ul>
+    </nav>
+
+	<!--<header id="page-header">
+		<div class="container">
+			<p>Nuestros Productos</p>
+		</div>		
+	</header>-->
+
+<section class="page-section">
+	<div class="container">
+		<center>
+		  	<div class="row">
+				<a class="cart-icon">
+					<span id="totalItems">0</span>
+					<ul class="cart"></ul>
+				</a>
+			
+
+				<div class="productosWrapper large-12 columns">
+					
+				</div>
+
+			</div>
+		</center>
+	</div>
+</section>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js?ver=1.11.2'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Ladda/0.9.8/spin.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Ladda/0.9.8/ladda.min.js'></script>
+
+    <script  src="scripts/carrito.js"></script>
+
+    <section class="credito">              
+        Desarrollado por <a href="https://www.linkedin.com/in/pablo-saracco-58586b161/" target="_blank">Pablo Saracco</a> Estudiante avanzado en ISP 2020
+   </section>
+
+</body>
+
+</html>

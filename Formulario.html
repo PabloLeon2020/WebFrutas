@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutorial Flex Box">
+    
+<style>
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: justify;
+  line-height: 20px;
+  font-size: 20px;
+}
+
+/* de aca hacia abajo es el estilo del menu */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: dodgerblue;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+/* de aca hacia abajo el estilo del formulario */
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+
+/* responsive */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+
+</style>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+
+<body>
+
+  <nav id="topNav">
+    <ul>
+        <li><a href="index.html" title="Nav Link 1">Home</a></li>
+        <li><a href="Formulario.html" title="Nav Link 1">Formulario</a></li>
+            <!--<ul>  
+                <li><a href="#" title="Sub Nav Link 1">Sub Nav Link 1</a></li>
+                <li><a href="#" title="Sub Nav Link 2">Sub Nav Link 2</a></li>
+                <li><a href="#" title="Sub Nav Link 3">Sub Nav Link 3</a></li>
+                <li><a href="#" title="Sub Nav Link 4">Sub Nav Link 4</a></li>
+                <li class="last"><a href="#" title="Sub Nav Link 5">Sub Nav Link 5</a></li>
+            </ul>-->
+        <li><a href="misProductos.html" title="Nav Link 1">misProductos</a></li>
+    </ul>
+</nav>
+<!--<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#contact">Formulario</a></li>
+</ul>-->
+
+
+<h1>Web de Frutas con cajas Flexbox</h1>
+
+<h2>Formulario de envio</h2>
+<p>Efecto responsive.</p>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Direccion de envio</h3>
+            <label for="fname"><i class="fa fa-user"></i> Nombre</label>
+            <input type="text" id="fname" name="firstname" placeholder="Wiliams">
+            <label for="fname"><i class="fa fa-user"></i> Apellido</label>
+            <input type="text" id="fname" name="firstname" placeholder="Ball">
+
+            <label for="adr"><i class="fa fa-address-card-o"></i> Direccion</label>
+            <input type="text" id="adr" name="address" placeholder="L.Fanti 542">
+            <label for="city"><i class="fa fa-institution"></i> Pedido</label>
+            <input type="text" id="city" name="city" placeholder="Comentario del pedido">
+
+            <div class="row">
+              <div class="col-50">
+                <!--<label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">-->
+              </div>
+              <div class="col-50">
+                <!--<label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">-->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Medio de Pago</h3>
+            <label for="fname">Aceptamos todas las tarjetas</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Nombre del titular</label>
+            <input type="text" id="cname" name="cardname" placeholder="Wiliams Ball">
+            <label for="ccnum">Numero de Tarjeta</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Mes Vencimiento</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="Noviembre">
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Año Vencimiento</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2021">
+              </div>
+              <div class="col-50">
+                <!--<label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">-->
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Direccion de envio igual al de facturacion?
+        </label>
+        <input type="submit" value="Continue con su compra" class="btn" onclick="return confirm('seguro que desea enviar?')" >
+        
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- ejemplo 1
+<div class="flex-container">
+    <div style="flex-grow: 12">
+        <h5>La fresa es una fruta del bosque adecuada en regímenes dietéticos, dado que tiene escasa concentración de glúcidos. Tiene un sabor muy agradable aunque ligeramente agrio (algunas pocas especies pueden tener sabor dulce).</h5>
+        <div style="flex-grow: 12">
+            <h5>La cereza, también conocido como guinda, es fruto de varios árboles del género Prunus. La cereza es una fruta rica en vitaminas A, B, C, E, K y PP, en hierro, calcio, magnesio, potasio y azufre.</h5>
+        </div>
+
+        <div style="flex-grow: 12">
+         
+            <h5>La pera comestible es el fruto del peral común (Pyrus communis). La pera es una fruta jugosa, carnosa, y una de las más importantes producidas en las regiones templadas.</h5>
+        </div>
+
+        <div style="flex-grow: 12">
+         
+            <h5>El plátano (también llamado banana, banano o guineo) es un fruto con cualidades variables en tamaño, color y firmeza, alargado, generalmente curvado y carnoso, rico en almidón cubierto con una cáscara, que puede ser verde, amarilla, roja, púrpura o marrón cuando está madura. Los frutos crecen en piñas que cuelgan de la parte superior de la planta.</h5>            
+        </div>
+
+        <div style="flex-grow: 12">
+         
+            <h5>La sandía es una fruta originaria de África, pero tiene una gran presencia y difusión en Asia. Hoy en día se cultiva de manera extendida por todo el mundo debido a su fruto, un pepónide de enorme tamaño —el récord entre las verduras fue una sandía de 120 kg.</h5>
+        </div>
+    </div>
+    
+    ejemplo 2
+    <div style="flex-grow: 12">
+        <h1>Fresa</h1>
+        <h5>La fresa es una fruta del bosque adecuada en regímenes dietéticos, dado que tiene escasa concentración de glúcidos. Tiene un sabor muy agradable aunque ligeramente agrio (algunas pocas especies pueden tener sabor dulce).</h5>
+        <div style="flex-grow: 12">
+            <h1>Cerezas</h1>
+            <h5>La cereza, también conocido como guinda, es fruto de varios árboles del género Prunus. La cereza es una fruta rica en vitaminas A, B, C, E, K y PP, en hierro, calcio, magnesio, potasio y azufre.</h5>
+        </div>
+
+        <div style="flex-grow: 12">
+            <h1>Pera</h1>
+            <h5>La pera comestible es el fruto del peral común (Pyrus communis). La pera es una fruta jugosa, carnosa, y una de las más importantes producidas en las regiones templadas.</h5>
+        </div>
+
+        <div style="flex-grow: 12">
+            <h1>Plátano</h1>
+            <h5>El plátano (también llamado banana, banano o guineo) es un fruto con cualidades variables en tamaño, color y firmeza, alargado, generalmente curvado y carnoso, rico en almidón cubierto con una cáscara, que puede ser verde, amarilla, roja, púrpura o marrón cuando está madura. Los frutos crecen en piñas que cuelgan de la parte superior de la planta.</h5>            
+        </div>
+
+        <div style="flex-grow: 12">
+            <h1>Sandía</h1>
+            <h5>La sandía es una fruta originaria de África, pero tiene una gran presencia y difusión en Asia. Hoy en día se cultiva de manera extendida por todo el mundo debido a su fruto, un pepónide de enorme tamaño —el récord entre las verduras fue una sandía de 120 kg.</h5>
+        </div>
+    
+    </div>
+    
+    ejemplo 3
+    <div style="flex-grow: 12">
+        
+        <h1><p><img src="imagenfresa.gif"></p>Fresa</h1>
+        <h5>La fresa es una fruta del bosque adecuada en regímenes dietéticos, dado que tiene escasa concentración de glúcidos. Tiene un sabor muy agradable aunque ligeramente agrio (algunas pocas especies pueden tener sabor dulce).</h5>
+        <div style="flex-grow: 12">
+            <h1><p><img src="imagencereza.gif"></p>cereza</h1>
+            <h5>La cereza, también conocido como guinda, es fruto de varios árboles del género Prunus. La cereza es una fruta rica en vitaminas A, B, C, E, K y PP, en hierro, calcio, magnesio, potasio y azufre.</h5>
+        </div>
+
+        <div style="flex-grow: 12">
+            <h1><p><img src="imagenpera.gif"></p>Pera</h1>
+            <h5>La pera comestible es el fruto del peral común (Pyrus communis). La pera es una fruta jugosa, carnosa, y una de las más importantes producidas en las regiones templadas.</h5>
+        </div>
+
+        <div style="flex-grow: 12">
+            <h1><p><img src="imagenplatano.gif"></p>Plátano</h1>
+            <h5>El plátano (también llamado banana, banano o guineo) es un fruto con cualidades variables en tamaño, color y firmeza, alargado, generalmente curvado y carnoso, rico en almidón cubierto con una cáscara, que puede ser verde, amarilla, roja, púrpura o marrón cuando está madura. Los frutos crecen en piñas que cuelgan de la parte superior de la planta.</h5>            
+        </div>
+
+        <div style="flex-grow: 12">
+            <h1><p><img src="imagensandia.gif"></p>Sandía</h1>
+            <h5>La sandía es una fruta originaria de África, pero tiene una gran presencia y difusión en Asia. Hoy en día se cultiva de manera extendida por todo el mundo debido a su fruto, un pepónide de enorme tamaño —el récord entre las verduras fue una sandía de 120 kg.</h5>
+        </div>
+    
+    </div>
+</div>-->
+
+
+    <section class="credito">              
+    Desarrollado por <a href="https://www.linkedin.com/in/pablo-saracco-58586b161/" target="_blank">Pablo Saracco</a> Estudiante avanzado en ISP 2020
+    </section>
+
+
+</body>
+</html>

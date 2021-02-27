@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutorial Flex Box">
+    
+<style>
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: justify;
+  line-height: 20px;
+  font-size: 20px;
+}
+
+/* de aca hacia abajo es el estilo del menu */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: dodgerblue;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+</style>
+    
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+</head>
+
+<body>
+
+<nav id="topNav">
+    <ul>
+        <li><a href="index.html" title="Nav Link 1">Home</a></li>
+        <li><a href="Formulario.html" title="Nav Link 1">Formulario</a></li>
+            
+        <li><a href="misProductos.html" title="Nav Link 1">misProductos</a></li>
+    </ul>
+</nav>
+
+
+<h1>Web de Frutas con cajas Flexbox</h1>
+
+<!-- ejemplo 1-->
+<div class="flex-container">
+    <div style="flex-grow: 12">
+        <h5>La fresa es una fruta del bosque adecuada en regímenes dietéticos, dado que tiene escasa concentración de glúcidos. Tiene un sabor muy agradable aunque ligeramente agrio (algunas pocas especies pueden tener sabor dulce).</h5>
+        <div style="flex-grow: 12">
+            <h5>La cereza, también conocido como guinda, es fruto de varios árboles del género Prunus. La cereza es una fruta rica en vitaminas A, B, C, E, K y PP, en hierro, calcio, magnesio, potasio y azufre.</h5>
+        </div>
+
+        <div style="flex-grow: 12">
+         
+            <h5>La pera comestible es el fruto del peral común (Pyrus communis). La pera es una fruta jugosa, carnosa, y una de las más importantes producidas en las regiones templadas.</h5>
+        </div>
+
+        <div style="flex-grow: 12">
+         
+            <h5>El plátano (también llamado banana, banano o guineo) es un fruto con cualidades variables en tamaño, color y firmeza, alargado, generalmente curvado y carnoso, rico en almidón cubierto con una cáscara, que puede ser verde, amarilla, roja, púrpura o marrón cuando está madura. Los frutos crecen en piñas que cuelgan de la parte superior de la planta.</h5>            
+        </div>
+
+        <div style="flex-grow: 12">
+         
+            <h5>La sandía es una fruta originaria de África, pero tiene una gran presencia y difusión en Asia. Hoy en día se cultiva de manera extendida por todo el mundo debido a su fruto, un pepónide de enorme tamaño —el récord entre las verduras fue una sandía de 120 kg.</h5>
+        </div>
+    </div>
+    
+    <!-- ejemplo 2-->
+    <div style="flex-grow: 12">
+        <h1>Fresa</h1>
+        <h5>La fresa es una fruta del bosque adecuada en regímenes dietéticos, dado que tiene escasa concentración de glúcidos. Tiene un sabor muy agradable aunque ligeramente agrio (algunas pocas especies pueden tener sabor dulce).</h5>
+        <div style="flex-grow: 12">
+            <h1>Cerezas</h1>
+            <h5>La cereza, también conocido como guinda, es fruto de varios árboles del género Prunus. La cereza es una fruta rica en vitaminas A, B, C, E, K y PP, en hierro, calcio, magnesio, potasio y azufre.</h5>
+        </div>
+
+        <div style="flex-grow: 12">
+            <h1>Pera</h1>
+            <h5>La pera comestible es el fruto del peral común (Pyrus communis). La pera es una fruta jugosa, carnosa, y una de las más importantes producidas en las regiones templadas.</h5>
+        </div>
+
+        <div style="flex-grow: 12">
+            <h1>Plátano</h1>
+            <h5>El plátano (también llamado banana, banano o guineo) es un fruto con cualidades variables en tamaño, color y firmeza, alargado, generalmente curvado y carnoso, rico en almidón cubierto con una cáscara, que puede ser verde, amarilla, roja, púrpura o marrón cuando está madura. Los frutos crecen en piñas que cuelgan de la parte superior de la planta.</h5>            
+        </div>
+
+        <div style="flex-grow: 12">
+            <h1>Sandía</h1>
+            <h5>La sandía es una fruta originaria de África, pero tiene una gran presencia y difusión en Asia. Hoy en día se cultiva de manera extendida por todo el mundo debido a su fruto, un pepónide de enorme tamaño —el récord entre las verduras fue una sandía de 120 kg.</h5>
+        </div>
+    
+    </div>
+    
+    <!-- ejemplo 3-->
+    <div style="flex-grow: 12">
+        
+        <h1><p><img src="img/imgfresa.png"></p>Fresa</h1>
+        <h5>La fresa es una fruta del bosque adecuada en regímenes dietéticos, dado que tiene escasa concentración de glúcidos. Tiene un sabor muy agradable aunque ligeramente agrio (algunas pocas especies pueden tener sabor dulce).</h5>
+        <div style="flex-grow: 12">
+            <h1><p><img src="img/imgcereza.png"></p>cereza</h1>
+            <h5>La cereza, también conocido como guinda, es fruto de varios árboles del género Prunus. La cereza es una fruta rica en vitaminas A, B, C, E, K y PP, en hierro, calcio, magnesio, potasio y azufre.</h5>
+        </div>
+
+        <div style="flex-grow: 12">
+            <h1><p><img src="img/imgpera.png"></p>Pera</h1>
+            <h5>La pera comestible es el fruto del peral común (Pyrus communis). La pera es una fruta jugosa, carnosa, y una de las más importantes producidas en las regiones templadas.</h5>
+        </div>
+
+        <div style="flex-grow: 12">
+            <h1><p><img src="img/imgplatano.png"></p>Plátano</h1>
+            <h5>El plátano (también llamado banana, banano o guineo) es un fruto con cualidades variables en tamaño, color y firmeza, alargado, generalmente curvado y carnoso, rico en almidón cubierto con una cáscara, que puede ser verde, amarilla, roja, púrpura o marrón cuando está madura. Los frutos crecen en piñas que cuelgan de la parte superior de la planta.</h5>            
+        </div>
+
+        <div style="flex-grow: 12">
+            <h1><p><img src="img/imgsandia.png"></p>Sandía</h1>
+            <h5>La sandía es una fruta originaria de África, pero tiene una gran presencia y difusión en Asia. Hoy en día se cultiva de manera extendida por todo el mundo debido a su fruto, un pepónide de enorme tamaño —el récord entre las verduras fue una sandía de 120 kg.</h5>
+        </div>
+    
+    </div>
+</div>
+
+
+    <section class="credito">              
+    Desarrollado por <a href="https://www.linkedin.com/in/pablo-saracco-58586b161/" target="_blank">Pablo Saracco</a> Estudiante avanzado en ISP 2020
+    </section>
+
+
+</body>
+</html>
